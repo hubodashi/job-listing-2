@@ -1,4 +1,4 @@
 class User < ApplicationRecord
   def admin?
-    email == 'hubodashi@aliyun.com'
+    is_admin
   end
