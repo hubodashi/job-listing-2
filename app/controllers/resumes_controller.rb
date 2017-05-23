@@ -14,7 +14,7 @@ class PesumesController < ApplicationController
     if @resume.save
       flash[:notice] = "成功提交履历"
       redirect_to job_path(@job)
-    else  
+    else
       render :new
     end
   end
@@ -22,6 +22,6 @@ class PesumesController < ApplicationController
   private
 
   def resume_papams
-    params.require(:resume).permit(:content)
+    params.require(:resume).permit(:content, :attachment)
   end
 end
